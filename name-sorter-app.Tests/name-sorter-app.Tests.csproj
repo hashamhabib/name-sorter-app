@@ -21,5 +21,9 @@
     <Using Include="NUnit.Framework" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\name-sorter-app\name-sorter-app.csproj" />
+  </ItemGroup>
+
 
 </Project>
