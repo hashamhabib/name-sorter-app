@@ -1,0 +1,23 @@
+# Ignore build outputs
+bin/
+obj/
+out/
+
+# Ignore user-specific files
+.vs/
+*.user
+*.suo
+
+# Ignore dependencies
+packages/
+*.dll
+*.exe
+*.pdb
+
+# Ignore logs
+*.log
+*.tmp
+
+# Ignore generated files
+*.nupkg
+project.assets.json
