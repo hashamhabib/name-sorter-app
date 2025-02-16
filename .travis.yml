@@ -1,0 +1,7 @@
+language: csharp
+mono: none
+dotnet: 6.0
+script:
+  - dotnet restore
+  - dotnet build src/name-sorter-app
+  - dotnet test tests/name-sorter-app.Tests
