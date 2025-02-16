@@ -3,6 +3,22 @@
 ## Description
 The **Name Sorter App** is a .NET Core console application that reads a list of names from a file, sorts them first by last name and then by given names, and outputs the sorted list both to the console and to a new file named `sorted-names-list.txt`.
 
+## Project Structure
+```
+name-sorter-app/
+│── .gitignore
+│── README.md
+│── name-sorter-app.sln
+│── name-sorter-app/
+│   ├── NameSorter.cs
+│   ├── Program.cs
+│   ├── name-sorter-app.csproj
+│── name-sorter-app.Tests/
+│   ├── UnitTest1.cs
+│   ├── name-sorter-app.Tests.csproj
+│── unsorted-names-list.txt
+```
+
 ## Features
 - Reads a list of names from a specified input file.
 - Sorts names based on last name, then given names.
@@ -17,16 +33,16 @@ The **Name Sorter App** is a .NET Core console application that reads a list of 
 ## Installation
 1. Clone the repository:
    ```sh
-   git clone https://github.com/hashamhabib/name-sorter-app
+   git clone <repository_url>
    cd name-sorter-app
    ```
-2. Build the project:
+2. Restore dependencies:
+   ```sh
+   dotnet restore
+   ```
+3. Build the project:
    ```sh
    dotnet build
-   ```
-3. Run unit tests (optional):
-   ```sh
-   dotnet test
    ```
 
 ## Usage
@@ -57,14 +73,15 @@ Shelby Nathan Yoder
 
 ## Unit Testing
 Unit tests are available in the `name-sorter-app.Tests` project.
-To run tests, navigate to the test directory and execute:
+To run tests, navigate to the project root directory and execute:
 ```sh
    dotnet test
 ```
+This will execute all test cases and display results in the console.
 
 ## License
 This project is open-source and available under the MIT License.
 
 ## Author
-HASHAM HABIB
+HASH MAP TECH PTY LTD
 
