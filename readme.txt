@@ -17,7 +17,7 @@ The **Name Sorter App** is a .NET Core console application that reads a list of 
 ## Installation
 1. Clone the repository:
    ```sh
-   git clone <repository_url>
+   git clone https://github.com/hashamhabib/name-sorter-app
    cd name-sorter-app
    ```
 2. Build the project:
