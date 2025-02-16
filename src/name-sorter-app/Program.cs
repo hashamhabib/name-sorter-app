@@ -21,6 +21,10 @@ namespace name_sorter_app
             try
             {
                 List<string> names = File.ReadAllLines(inputFilePath).ToList();
+
+                // Validate names before sorting
+                names = names.Where(ValidateName).ToList();
+
                 List<string> sortedNames = NameSorter.SortNames(names);
 
                 Console.WriteLine("\nSorted Names:");
@@ -28,11 +32,22 @@ namespace name_sorter_app
 
                 File.WriteAllLines(outputFilePath, sortedNames);
                 Console.WriteLine($"\nSorted names saved to {outputFilePath}");
+
             }
             catch (Exception ex)
             {
                 Console.WriteLine($"Error: {ex.Message}");
             }
+        }
+        static bool ValidateName(string name)
+        {
+            var parts = name.Split(' ');
+            if (parts.Length < 2 || parts.Length > 4)
+            {
+                Console.WriteLine($"Invalid name format: {name}. It must have at least 1 given name and up to 3 given names.");
+                return false;
+            }
+            return true;
         }
     }
 
